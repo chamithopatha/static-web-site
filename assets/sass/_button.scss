@@ -1,0 +1,90 @@
+/*----------------------------------------*/
+/*  Button Custom Styles
+/*----------------------------------------*/
+.btn{
+    @include transition (.3s);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 22px 40px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    &--blue{
+        background-color: $theme-color;
+    }
+    &--icon {
+        &::after {
+            content: "\f178";
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 300;
+            font-size: 20px;
+            padding-left: 14px;
+        }
+    }
+    &:hover {
+        @include transition (.3s);
+        color: $hover-color-light;
+    }
+    &--white {
+        background: $color-white;
+        color: $theme-color !important;
+        &:hover {
+            color: $theme-color;
+            background: $hover-color-light;
+        }
+    }
+    &--grey {
+        background: rgba($color: $theme-color, $alpha: 0.10);
+        color: $primary-color;
+        @include transition (.4s);
+    }
+    &--play {
+        height: 150px;
+        width: 150px;
+        display: inline-block;
+        text-align: center;
+        line-height: 150px;
+        background: #ffffff;
+        border-radius: 50%;
+        font-size: 20px;
+        color: $theme-color;
+        margin: 0 auto;
+        transition: .4s;
+        &:hover {
+            background: $theme-color;
+            color: $color-white;
+        }
+    }
+}
+.btn.btn--grey:hover {
+    background: rgba($color: $theme-color, $alpha: 1);
+    color: $color-white;
+    @include transition (.4s);
+}
+
+.btn--border {
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: underline;
+    margin: 0 26px;
+    display: inline-block;
+    &--round {
+        background: transparent;
+        color: $theme-color;
+        border: 2px solid $theme-color;
+        padding: 21px 40px;
+        &:hover {
+            background: $theme-color !important;
+            color: $color-white !important;
+        }
+    }
+    &--h5 {
+        border: 2px solid #b1add8;
+        color: #b1add8;
+    }
+    &:hover {
+        color: $hover-color-light;
+    }
+}

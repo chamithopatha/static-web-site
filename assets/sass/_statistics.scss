@@ -1,0 +1,112 @@
+/*----------------------------------------*/
+/*  10. statistics
+/*----------------------------------------*/
+.statistics {
+    &__block {
+        padding-right: 28px;
+        @media #{$d-lg} {
+            padding-right: 0;
+        }
+        & h4 {
+            @media #{$d-lg} {
+               font-size: 20px;
+            }
+        }
+        & > span {
+            font-size: 40px;
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 25px;
+            & i {
+                margin-right: 12px;
+            }
+        }
+        &--h2 {
+            padding-right: 0;
+            & span {
+                font-size: 35px;
+                display: block;
+            }
+            & p {
+                font-size: 40px;
+                font-weight: 600;
+                color: $theme-color;
+                display: inline-flex;
+                & sup {
+                    top: -27px;
+                    font-size: 25px;
+                }
+            }
+        }
+        &--h3 {
+            padding: 52px 45px;
+            border: 2px solid #e3e3e3;
+            position: relative;
+            @media #{$d-lg} {
+                padding: 52px 30px;
+            }
+            &--one{
+                border-right: 2px solid transparent;
+                border-bottom: 2px solid transparent;
+                @media #{$d-xs} {
+                    border-right: 2px solid #e3e3e3;
+                }
+            }
+            &--two{
+                border-bottom: 2px solid transparent;
+            }
+            &--three{
+                border-right: 2px solid transparent;
+                @media #{$d-xs} {
+                    border-right: 2px solid #e3e3e3;
+                    border-bottom: 2px solid transparent;
+                }
+            }
+            &::before{
+                position: absolute;
+                content: "";
+                width: 300px;
+                height: 300px;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                background: #221f3c;
+                transition: .4s;
+                opacity: 0;
+                visibility: hidden;
+                z-index: 1;
+            }
+            &:hover::before {
+                opacity: 1;
+                visibility: visible;
+            }
+            &:hover {
+                & span i::before,
+                & p {
+                    color: $color-white;
+                    z-index: 111;
+                    position: relative;
+                }
+            }
+            &:hover {
+                & h5 {
+                    color: $color-text-2;
+                    z-index: 111;
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+
+.statistics-shape {
+    position: absolute;
+}
+.statistics-shape1 {
+    top: 0;
+    left: 0;
+}
+.statistics-shape2 {
+    bottom: 0;
+    right: 0;
+}

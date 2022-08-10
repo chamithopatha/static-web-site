@@ -1,0 +1,25 @@
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    color: $color-body-text;
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    text-align: center;
+    background: $color-white;
+    line-height: 70px;
+    border-radius: 50%;
+    padding: 0;
+    z-index: 11;
+    opacity: 0;
+    @include transition(.3s);
+    visibility: hidden;
+    cursor: pointer;
+    &:hover{
+        background: $theme-color;
+        color: $color-white;
+        transition: .4s;
+    }
+}

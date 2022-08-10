@@ -1,0 +1,59 @@
+// Font
+$font-primary: 'Cerebri Sans';
+
+// Colors --------------
+$color-white: #ffffff;
+$color-black: #000;
+$color-grey:#f8f8f8;
+$color-grey-2:#f2f0f0;
+$theme-color: #221f3c;
+$primary-color: #696969;
+$color-body-text: #696969;
+$color-hr:#eceff8;
+$color-hr-2:#e6e6e6;
+$color-light:#bdbdbd;
+$color-light-2:#9f9cb8;
+$color-light-3:#d0cee3;
+$color-text-2: #dbd9ef;
+$color-text-3: #b1add8;
+$color-text-4: #b1acd7;
+
+
+// Heading Color
+$color-heading: #222;
+
+// Soft color
+$color-black-soft:#7e7e7e;
+$color-blue-soft: #353156;
+$color-blue-soft-2: #383459;
+$color-blue-soft-3: #434064;
+$color-blue-soft-4: #2f2c4d;
+$color-blue-soft-5: #393657;
+
+// Border Color
+$border-color: #e3e3e3;
+$border-color-2: #e5e5e5;
+$border-color-3: #e2e2e2;
+
+$hr-color: #ececec;
+
+
+// Hover Color
+
+$hover-color: #524d8b;
+$hover-color-light: #c0bce9;
+
+
+// Responsive Variables
+$d-la: 'only screen and (min-width: 1200px) and (max-width: 1600px)';
+$d-lg : 'only screen and (min-width: 992px) and (max-width: 1200px)';
+$d-md:'only screen and (min-width: 768px) and (max-width: 991px)';
+$d-xs:'(max-width: 767px)';
+$d-sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
+
+
+// @media #{$d-la}
+// @media #{$d-lg}
+// @media #{$d-md}
+// @media #{$d-xs}
+// @media #{$d-sm}

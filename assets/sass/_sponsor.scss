@@ -1,0 +1,37 @@
+/*----------------------------------------*/
+/*  13. Sponsor
+/*----------------------------------------*/
+.sponsor {
+    &__single {
+        text-align: center;
+        & img {
+            display: inline-block;
+        }
+    }
+    &__hr {
+        border-bottom: 2px solid $hr-color;
+        margin: 0;
+    }
+}
+.sponsor__single.slick-slide.slick-current.slick-active img {
+    filter: invert(100%);
+    outline: 0;
+}
+.sponsor-active--h3 .sponsor__single.slick-slide.slick-current.slick-active img {
+    filter: invert(1%);
+    outline: 0;
+}
+.sponsor__single.slick-slide {
+    outline: 0 !important;
+}
+
+
+.sponsor-active .slick-track {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.sponsor-active--h3 .slick-track {
+    display: flex;
+    align-items: center;
+}

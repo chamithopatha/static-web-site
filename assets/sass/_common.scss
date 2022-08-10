@@ -1,0 +1,403 @@
+/* 1. Theme default css */
+body {
+    font-family: $font-primary;
+    font-weight: normal;
+    font-style: normal;
+    color: $color-body-text;
+    font-size: 14px;
+}
+
+.img,
+img {
+    max-width: 100%;
+    @include transition(.3s);
+}
+
+.f-left {
+    float: left
+}
+
+.f-right {
+    float: right
+}
+
+.fix {
+    overflow: hidden
+}
+
+a,
+.button {
+    @include transition(.3s);
+}
+
+a:focus,
+.button:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+a:focus,
+a:hover {
+    color: $hover-color;
+    text-decoration: none;
+}
+
+a,
+button {
+    color: inherit;
+    outline: medium none;
+}
+
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+    outline: 0
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-primary;
+    font-weight: normal;
+    color: $theme-color;
+    margin-top: 0px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: normal;
+    line-height: 1.3;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: inherit;
+}
+
+h1 {
+    font-size: 85px;
+}
+
+h2 {
+    font-size: 45px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 15px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none
+}
+
+p {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 28px;
+    color: $color-body-text;
+    margin-bottom: 15px;
+}
+
+hr {
+    border-bottom: 1px solid $color-hr;
+    border-top: 0 none;
+    margin: 30px 0;
+    padding: 0;
+}
+
+label {
+    color: $color-black-soft;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+*::-moz-selection {
+    background: $color-black;
+    color: $color-white;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: $color-black;
+    color: $color-white;
+    text-shadow: none;
+}
+
+::selection {
+    background: $color-black;
+    color: $color-white;
+    text-shadow: none;
+}
+
+/*--
+    - Input Placeholder
+-----------------------------------------*/
+*::-moz-placeholder {
+    color: $color-black;
+    font-size: 14px;
+    opacity: 1;
+}
+
+*::placeholder {
+    color: $color-black;
+    font-size: 14px;
+    opacity: 1;
+}
+
+
+/*--
+    - Common Classes
+-----------------------------------------*/
+.fix {
+    overflow: hidden
+}
+
+.clear {
+    clear: both;
+}
+
+
+/*--
+    - Background color
+-----------------------------------------*/
+.grey-bg {
+    background: $color-grey;
+}
+
+.white-bg {
+    background: $color-white;
+}
+
+.black-bg {
+    background: $color-black;
+}
+
+.theme-bg {
+    background: $theme-color;
+}
+
+// .primary-bg {
+// 	background: #222;
+// }
+
+/*--
+    - color
+-----------------------------------------*/
+.white-color {
+    color: $color-white;
+}
+
+.black-color {
+    color: $color-black;
+}
+
+.theme-color {
+    color: $theme-color;
+}
+
+.primary-color {
+    color: $primary-color;
+}
+
+.color-text-2 {
+    color: $color-text-2;
+}
+
+// Hover color class
+.hover-color-light:hover a{
+    color: $hover-color-light;
+}
+
+// Font weight
+.fw-400 {
+    font-weight: 400;
+}
+.fw-500{
+    font-weight: 500;
+}
+.fw-600{
+    font-weight: 600;
+}
+.fw-700{
+    font-weight: 700;
+}
+
+/*--
+    - Margin & Padding
+-----------------------------------------*/
+/*-- Margin Top --*/
+@for $i from 1 through 50 {
+    .mt-#{5 * $i} {
+        margin-top: 5px * $i;
+    }
+}
+
+/*-- Margin Bottom --*/
+@for $i from 1 through 50 {
+    .mb-#{5 * $i} {
+        margin-bottom: 5px *$i;
+    }
+}
+
+/*-- Margin Left --*/
+@for $i from 1 through 50 {
+    .ml-#{5 * $i} {
+        margin-left: 5px * $i;
+    }
+}
+
+/*-- Margin Right --*/
+@for $i from 1 through 50 {
+    .mr-#{5 * $i} {
+        margin-right: 5px *$i;
+    }
+}
+
+/*-- Padding Top --*/
+@for $i from 1 through 50 {
+    .pt-#{5 * $i} {
+        padding-top: 5px *$i;
+    }
+}
+
+/*-- Padding Bottom --*/
+@for $i from 1 through 50 {
+    .pb-#{5 * $i} {
+        padding-bottom: 5px *$i;
+    }
+}
+
+/*-- Padding Left --*/
+@for $i from 1 through 50 {
+    .pl-#{5 * $i} {
+        padding-left: 5px *$i;
+    }
+}
+
+/*-- Padding Right --*/
+@for $i from 1 through 50 {
+    .pr-#{5 * $i} {
+        padding-right: 5px *$i;
+    }
+}
+
+// others common css here :)
+
+// Section Title
+.theme {
+    &__small--title {
+        margin-bottom: 24px;
+        display: block;
+        & span {
+            display: inline-block;
+            vertical-align: middle;
+            width: 40px;
+            height: 3px;
+            background: $primary-color;
+            line-height: 1;
+            margin:0 20px;
+            @media #{$d-xs} {
+                width: 30px;
+                margin: 0 13px;
+            }
+        }
+        .white-line {
+            background: $color-white;
+        }
+    }
+    &__big--title {
+        @media #{$d-xs} {
+            font-size: 24px;
+        }
+        br {
+            @media #{$d-lg} {
+                display: none;
+            }
+            @media #{$d-md} {
+                display: none;
+            }
+            @media #{$d-xs} {
+                display: none;
+            }
+        }
+    }
+    &__small--title-left {
+        & span {
+            margin-left: 0;
+        }
+    }
+    &__small--title-right {
+        & span {
+            margin-right: 0;
+        }
+    }
+    .add-btn {
+        position: absolute;
+        left: auto;
+        bottom: 7px;
+        height: 70px;
+        width: 70px;
+        background: $color-white;
+        line-height: 70px;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 20px;
+        color: $theme-color;
+        z-index: 1;
+        box-shadow: 0px 10px 30px 0px rgba(191, 191, 191, 0.6);
+        @include transition (.4s);
+        right: 0;
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: 0;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            display: block;
+            width: 80px;
+            height: 80px;
+            background: #fff;
+            border-radius: 50%;
+            animation: pulse-border 1500ms ease-out infinite;
+            z-index: -1;
+            opacity: 0.54;
+        }
+    }
+}
+// Section Title End
+
+

@@ -1,0 +1,128 @@
+/*----------------------------------------*/
+/*  14. Footer
+/*----------------------------------------*/
+.footer {
+    &--contact-icon {
+        & i {
+             font-size: 35px;
+        }
+    }
+    &--contact-text {
+        & span {
+            margin-bottom: 3px;
+            display: block;
+        }
+    }
+    &__title {
+        margin-bottom: 23px;
+    }
+    &__menu {
+        & ul {
+            & li {
+                & a {
+                    display: block;
+                    margin-bottom: 8px;
+                    font-size: 15px;
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+        &--h4 {
+            & ul {
+                & li {
+                    & a {
+                        &:hover {
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__newsletter {
+        margin-bottom: 22px;
+        & form {
+            position: relative;
+            & input {
+                width: 100%;
+                height: 50px;
+                border: 2px solid $theme-color;
+                padding: 15px;
+                font-size: 15px;
+                &::placeholder {
+                    font-size: 15px;
+                    color: $primary-color;
+                }
+            }
+            & button {
+                   position: absolute;
+                   right: 0;
+                   width: 50px;
+                   text-align: center;
+                   line-height: 45px;
+                   border: 2px solid $theme-color;
+                   top: 0;
+                   height: 100%;
+                   font-size: 18px;
+                   color: #fff;
+                   background: $theme-color;
+                   cursor: pointer;
+            }
+        }
+        &--h4 {
+            & form {
+                & button {
+                    background: #3f3c5f;
+                }
+            }
+        }
+    }
+    &__social {
+        & ul {
+            & li {
+                display: inline-block;
+                font-size: 18px;
+                font-weight: 700;
+                color: $theme-color;
+                margin-right: 20px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                & a {
+                    font-size: 14px;
+                    color: $primary-color;
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+        &--h4 {
+            & ul {
+                & li {
+                    color: $color-white;
+                    & a {
+                        font-size: 14px;
+                        color: $color-white;
+                        &:hover {
+                            color: $color-text-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__copyright {
+        & p {
+            padding: 20px 0;
+            border-top: 2px solid $color-hr-2;
+        }
+        &--h4 {
+            & p {
+                border-top: 2px solid #312d54;
+            }
+        }
+    }
+}

@@ -1,0 +1,271 @@
+/*----------------------------------------*/
+/*  04. Feature
+/*----------------------------------------*/
+.feature {
+    .feature-img {
+        @media #{$d-md} {
+            width: 100%;
+        }
+    }
+    &__img{
+        &--dot-shape{
+            position: absolute;
+            bottom: 0;
+            right: 52px;
+            z-index: -1;
+            animation: rotated infinite linear 27s;
+        }
+        &--caption{
+            width: 165px;
+            height: 177px;
+            filter: drop-shadow(0px 0px 18px rgba(191, 191, 191, 0.5));
+            position: absolute;
+            bottom: 125px;
+            right: 20px;
+            &--shadow{
+                -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+                background-color: $color-white;
+                display: block;
+                z-index: 1;
+                padding: 35px 15px 40px 15px;
+                height: 100%;
+                & span {
+                    font-size: 65px;
+                    line-height: 1;
+                    position: relative;
+                    & sup{
+                        font-size: 24px;
+                        top: -6px;
+                        position: absolute;
+                        line-height: 1;
+                        right: -10px;
+                    }
+                }
+                & p {
+                    font-size: 24px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &__content{
+        padding-left: 60px;
+        padding-right: 67px;
+        @media #{$d-lg} {
+            padding-left: 45px;
+            padding-right: 0px;
+        }
+        @media #{$d-xs} {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        & h2 {
+            padding-right: 48px;
+            line-height: 1.2;
+            @media #{$d-lg} {
+                padding-right: 0px;
+            }
+            @media #{$d-xs} {
+                padding-right: 0px;
+                font-size: 30px;
+            }
+        }
+        & > span {
+            display: block;
+            margin-bottom: 26px;
+            & span {
+                display: inline-block;
+                vertical-align: middle;
+                width: 40px;
+                height: 3px;
+                background: #696969;
+                line-height: 1;
+                margin-right: 20px;
+            }
+        }
+        & > p {
+            margin-bottom: 32px;
+        }
+        &--h3 {
+            padding-right: 0;
+            padding-left: 53px;
+            @media #{$d-lg} {
+                padding-left: 0px;
+            }
+            @media #{$d-xs} {
+                padding-left: 0px;
+            }
+            & p {
+                padding-right: 70px;
+            }
+        }
+    }
+    &__list {
+        &--icon{
+            margin-right: 25px;
+            & i {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 45px;
+                border: 2px solid #221f3c;
+                font-size: 17px;
+                color: #221f3c;
+                border-radius: 50%;
+                transition: .4s;
+            }
+        }
+        &--content {
+            & p {
+                margin-bottom: 38px;
+            }
+        }
+        &:hover .feature__list--icon i {
+            background: #221f3c;
+            color: #fff;
+            transition: .4s;
+        }
+    }
+    &__block {
+        display: flex;
+        align-items: center;
+        padding: 35px 31px 35px 35px;
+        border: 1px solid $border-color;
+        @include transition (.3s);
+        @media #{$d-lg} {
+            padding: 35px 20px 35px 20px;
+        }
+        @media #{$d-xs} {
+            padding: 35px 20px 35px 20px;
+        }
+        &:hover {
+            background: $theme-color;
+            @include transition (.3s);
+            border: 1px solid transparent;
+            .icon {
+                & i {
+                    background: rgba($color: $color-white, $alpha: 1);
+                    color: $theme-color;
+                    @include transition (.3s);
+                }
+            }
+            .text {
+                & h5 {
+                    color: $color-white;
+                    @include transition (.3s);
+                }
+
+                & p {
+                    color: $color-light-3;
+                    @include transition (.3s);
+                }
+            }
+        }
+        .icon {
+            & i {
+                height: 60px;
+                width: 60px;
+                display: inline-block;
+                text-align: center;
+                line-height: 60px;
+                background: rgba($color: $theme-color, $alpha: 0.10);
+                border-radius: 50%;
+                margin-right: 15px;
+                color: $theme-color;
+                font-size: 24px;
+            }
+        }
+        .text {
+            & h5 {
+                margin-bottom: 2px;
+                @media #{$d-lg} {
+                    font-size: 15px;
+                }
+                @media #{$d-md} {
+                    font-size: 15px;
+                }
+                @media #{$d-xs} {
+                    font-size: 15px;
+                }
+            }
+            & p {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .progress {
+        height: 3px;
+        font-size: 18px;
+        background-color: #ececec;
+        border-radius: 0;
+    }
+    .progress-bar span {
+        color: $theme-color;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-weight: 700;
+        font-size: 18px;
+        @include transition(.6s);
+    }
+    .progress-bar {
+        background-color: $theme-color;
+    }
+    .progress-border {
+        padding: 13px 15px;
+        border: 1px solid #e2e2e2;
+        border-radius: 30px;
+    }
+}
+
+.skills {
+    &__left {
+        &--thumb {
+            position: relative;
+            left: -99px;
+            @media #{$d-la} {
+                left: 0px;
+            }
+            @media #{$d-lg} {
+                left: 0px;
+            }
+            @media #{$d-md} {
+                left: 0px;
+                text-align: center;
+            }
+            @media #{$d-xs} {
+                left: 0px;
+                text-align: center;
+            }
+        }
+    }
+    &__shape {
+        width: 670px;
+        height: 670px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        border-radius: 50%;
+        background: rgba($color: $theme-color, $alpha: 0.07);
+        z-index: -1;
+        @media #{$d-lg} {
+            width: 515px;
+            height: 515px;
+        }
+    }
+    &__content {
+        padding-left: 73px;
+        @media #{$d-lg} {
+            padding-left: 30px;
+        }
+        @media #{$d-md} {
+            padding-left: 0px;
+        }
+        @media #{$d-xs} {
+            padding-left: 0px;
+        }
+    }
+}

@@ -1,0 +1,174 @@
+/*----------------------------------------*/
+/*  07. Team
+/*----------------------------------------*/
+.team {
+    &:hover .team__thumb {
+        &::before,
+        &::after {
+            height: 100%;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__thumb {
+        overflow: hidden;
+        &::before,
+        &::after {
+            background-image: -moz-linear-gradient( 90deg, rgba(34,31,60,0.94902) 0%, rgba(34,31,60,0.47) 40%, rgba(34,31,60,0.45) 43%, rgba(34,31,60,0) 100%);
+            background-image: -webkit-linear-gradient( 90deg, rgba(34,31,60,0.94902) 0%, rgba(34,31,60,0.47) 40%, rgba(34,31,60,0.45) 43%, rgba(34,31,60,0) 100%);
+            background-image: -ms-linear-gradient( 90deg, rgba(34,31,60,0.94902) 0%, rgba(34,31,60,0.47) 40%, rgba(34,31,60,0.45) 43%, rgba(34,31,60,0) 100%);
+            content: "";
+            width: 100%;
+            height: 0%;
+            display: inline-block;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 1;
+            position: absolute;
+            @include transition(.3s);
+            opacity: 0;
+            visibility: hidden;
+        }
+        & img {
+            width: 100%;
+            @include transition(.3s);
+        }
+        &:hover img {
+            transform: scale(1.1);
+            @include transition(.3s);
+        }
+    }
+    &__social {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        text-align: center;
+        margin: 0 auto;
+        opacity: 0;
+        visibility: hidden;
+        @include transition (.3s);
+        z-index: 11;
+        & ul {
+            & li {
+                display: inline-block;
+                &:nth-child(2) {
+                    & a {
+                        background: #e60023;
+                    }
+                }
+                &:nth-child(3) {
+                    & a {
+                        background: #d54b3d;
+                    }
+                }
+                &:nth-child(4) {
+                    & a {
+                        background: #1a91da;
+                    }
+                }
+                & a {
+                    height: 45px;
+                    display: inline-block;
+                    width: 45px;
+                    line-height: 45px;
+                    border-radius: 50%;
+                    color: #fff;
+                    background: #0c88ef;
+                    margin: 0 4.5px;
+                    @media #{$d-md} {
+                        margin: 0 0.5px;
+                    }
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+            }
+        }
+        &--h2 {
+            & ul {
+                & li {
+                    & a {
+                        height: 35px;
+                        width: 35px;
+                        font-size: 14px;
+                        line-height: 36px;
+                        margin: 0 3px;
+                    }
+                }
+            }
+            &:hover {
+                bottom: 30px;
+            }
+        }
+    }
+    &:hover .team__social {
+        opacity: 1;
+        visibility: visible;
+        bottom: 20px;
+        &--h2 {
+            bottom: 30px;
+        }
+    }
+
+    &__content {
+        & h3 {
+           margin-bottom: 4px;
+        }
+    }
+    &--h2 {
+        @include transition (.3s);
+        padding: 45px 35px 40px;
+        border: 1px solid $border-color-2;
+        border-radius: 10px;
+        &:hover {
+            background: $theme-color;
+            @include transition (.3s);
+            border: 1px solid transparent;
+        }
+        &:hover .team__thumb--h2 {
+            border: 8px solid #fff;
+            @include transition (.3s);
+        }
+        &:hover .team__thumb--h2::before {
+            opacity: 1;
+            visibility: visible;
+        }
+        &:hover .team__content--h2 {
+            & h3 {
+                color: $color-white;
+                @include transition (.3s);
+            }
+            & h6 {
+                color: $color-text-2;
+                @include transition (.3s);
+            }
+        }
+    }
+    &__thumb--h2 {
+        overflow: hidden;
+        border-radius: 50%;
+        border: 8px solid transparent;
+        @include transition (.3s);
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: rgba($color: $theme-color, $alpha: 0.50);
+            left: 0;
+            top: 0;
+            right: 0;
+            opacity: 0;
+            visibility: hidden;
+            @include transition (.3s);
+        }
+        & img {
+            width: 100%;
+        }
+    }
+    &__col2 {
+        padding-top: 30px;
+    }
+}

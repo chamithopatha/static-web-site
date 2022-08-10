@@ -1,0 +1,63 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+@font-face {
+    font-family: 'Cerebri Sans';
+    src: url('../fonts/CerebriSans-SemiBold.eot');
+    src: local('Cerebri Sans SemiBold'), local('../fonts/CerebriSans-SemiBold'),
+        url('../fonts/CerebriSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CerebriSans-SemiBold.woff2') format('woff2'),
+        url('../fonts/CerebriSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cerebri Sans';
+    src: url('../fonts/CerebriSans-Regular.eot');
+    src: local('Cerebri Sans Regular'), local('../fonts/CerebriSans-Regular'),
+        url('../fonts/CerebriSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CerebriSans-Regular.woff2') format('woff2'),
+        url('../fonts/CerebriSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cerebri Sans';
+    src: url('../fonts/CerebriSans-Bold.eot');
+    src: local('Cerebri Sans Bold'), local('../fonts/CerebriSans-Bold'),
+        url('../fonts/CerebriSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CerebriSans-Bold.woff2') format('woff2'),
+        url('../fonts/CerebriSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cerebri Sans';
+    src: url('../fonts/CerebriSans-Light.eot');
+    src: local('Cerebri Sans Light'), local('../fonts/CerebriSans-Light'),
+        url('../fonts/CerebriSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CerebriSans-Light.woff2') format('woff2'),
+        url('../fonts/CerebriSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cerebri Sans';
+    src: url('../fonts/CerebriSans-Medium.eot');
+    src: local('Cerebri Sans Medium'), local('../fonts/CerebriSans-Medium'),
+        url('../fonts/CerebriSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CerebriSans-Medium.woff2') format('woff2'),
+        url('../fonts/CerebriSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

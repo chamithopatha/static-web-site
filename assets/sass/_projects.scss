@@ -1,0 +1,113 @@
+/*----------------------------------------*/
+/*  09. Projects
+/*----------------------------------------*/
+.project {
+    &__search {
+        margin-bottom: 10px;
+        text-align: right;
+        & button {
+            padding: 0;
+            font-size: 18px;
+            color: $color-light-2;
+            background: transparent;
+            border: 0;
+            background: transparent;
+            border: 0;
+            height: 70px;
+            width: 70px;
+            border: 3px solid $color-light-2;
+            border-radius: 50%;
+        }
+    }
+    &__box {
+        padding: 0 55px;
+    }
+    &__img {
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: $theme-color;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(.3s);
+            z-index: 11;
+        }
+    }
+    &__content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-30%);
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(.3s);
+        z-index: 111;
+        & h2 {
+            font-size: 30px;
+        }
+    }
+    &__link {
+        position: absolute;
+        bottom: 10px;
+        right: 0px;
+        font-size: 24px;
+        color: $theme-color;
+        width: 70px;
+        height: 70px;
+        display: inline-block;
+        line-height: 70px;
+        text-align: right;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 111;
+        @include transition(.3s);
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            left: 0;
+            height: 100%;
+            border-style: solid;
+            border-width: 0 0 70px 70px;
+            border-color: transparent transparent #ffffff transparent;
+        }
+        & a {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            line-height: 1;
+        }
+    }
+    &__block {
+        overflow: hidden;
+        &:hover .project__img::before {
+            opacity: 0.50;
+            visibility: visible;
+            @include transition(.3s);
+        }
+        &:hover .project__link {
+            opacity: 1;
+            visibility: visible;
+            @include transition(.3s);
+            right: 10px;
+        }
+        &:hover .project__content {
+            visibility: visible;
+            opacity: 1;
+            @include transition(.3s);
+            transform: translateY(-50%);
+        }
+        &:hover {
+            .project__img img {
+                transform: scale(1.2) rotate(3deg);
+                @include transition(.5s);
+            }
+        }
+    }
+}

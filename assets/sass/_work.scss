@@ -1,0 +1,55 @@
+/*----------------------------------------*/
+/*  16. Work
+/*----------------------------------------*/
+.work {
+    &__block {
+        & > i {
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+            line-height: 100px;
+            background: rgba($color: $theme-color, $alpha: 0.07);
+            border-radius: 50%;
+            font-size: 40px;
+            color: $theme-color;
+            margin-bottom: 30px;
+            & span {
+                position: absolute;
+                height: 35px;
+                width: 35px;
+                font-size: 14px;
+                background: $theme-color;
+                line-height: 35px;
+                border-radius: 50%;
+                color: $color-white;
+                left: -3px;
+                top: -13px;
+                font-family: "Cerebri Sans";
+                font-weight: 600;
+            }
+        }
+        & a {
+            & i {
+                font-size: 30px;
+            }
+        }
+        & h4 {
+            margin-bottom: 10px;
+        }
+        &::before {
+            position: absolute;
+            content: url(../images/shape/work-separate-shape.png);
+            right: -153px;
+            top: 34px;
+            @media #{$d-md} {
+                display: none;
+            }
+            @media #{$d-xs} {
+                display: none;
+            }
+        }
+    }
+    .col-lg-3:last-child .work__block::before {
+        display: none;
+    }
+}
